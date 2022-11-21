@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompyuter</title>
+</head>
+<body>
+    {% for x in post %}
+    <h3>{{ x.brand }}</h3>
+    <p>{{ x.color }}</p>
+    <img src="{{ x.img }}" alt="" >
+    {% endfor %}
+</body>
+</html>
