@@ -1,5 +1,11 @@
 from django.shortcuts import render
 from .models import *
+def chart(request):
+    posts = car.objects.all()
+    context = {
+        'posts':posts
+    }
+    return render(request,'chartjs.html',context)
 
 def func1(request):
     posts = car.objects.all()
