@@ -24,10 +24,10 @@
         new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: [{% for post in post %} '{{post.name}}',{{'post.color'}} {% endfor %}],
+            labels: [{% for post in posts %},'{{post.name}}', {% endfor %}],
             datasets: [{
               label: '# of Votes',
-              data: [{% for post in post %} {{post.menge}}, {% endfor %}],
+              data: [{% for post in posts %}, {{post.menge}}, {% endfor %}],
               backgroundColor:['red','green','yellow','purple','orange','blue'],
               borderWidth: 1
       }]
